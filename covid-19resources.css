@@ -6,6 +6,12 @@
   /* color: white; */
   /* this says padding and border are included */
   box-sizing: border-box;
+  /* color: white; */
+  font-family: "Open Sans", sans-serif;
+}
+body{
+  width: 100%;
+  height: 100%;
 }
 .header {
   flex: 9.5;
@@ -15,7 +21,10 @@
   font-size: 55px;
   font-weight: 400;
   font-family: "Open Sans", sans-serif;
-  border-radius: 10px;
+  /* border-radius: 10px; */
+  text-decoration: none;
+  /* background-color: rgb(231, 155, 125); */
+  opacity: 1.5;
 }
 .navibar {
   background-color: #1e1e1e;
@@ -23,8 +32,8 @@
   /* border-radius: 20px; */
 }
 .sidebar{
-  left: 0%;
-  display: none;
+  left: 0vw;
+  /* display: none; */
   background-color: #1e1e1e;
   top: 0%;
   /* border-radius: 40px; */
@@ -39,6 +48,10 @@
   transition: all 0.3s ease-in-out;
   transition-property: left;
   /* transform: translateY(20vw); */
+  overflow-y: scroll;
+}
+.title{
+  font-family: "Open Sans", sans-serif;
 }
 .sidebar,.text a{
   color: white;
@@ -83,7 +96,7 @@ nav ul li a {
   color: white;
   position: relative;
   flex-direction: left;
-  font-size: 20px;
+  font-size: 3vmin;
   font-family: "Open Sans", sans-serif;
   font-weight: 300;
   display: block;
@@ -93,6 +106,7 @@ nav ul li a {
   margin-left: 0px;
   padding-left: 5px;
   border-left: 4px solid transparent;
+  transition: all 0.3s ease-in-out;
 }
 nav ul li a:hover {
   color: darkcyan;
@@ -100,16 +114,19 @@ nav ul li a:hover {
   background-color: #1e1e1e;
   border-left-color: cyan;
 }
-.menu {
+
+#menu1 {
   /* position: relative; */
   flex: 0.5;
-  bottom: 60px;
+  /* bottom: 60px; */
   background-color: transparent;
   border: none;
   height: 60px;
   width: 20px;
   /* user-select: none; */
-  transition: all 0.3 ease-in-out;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  /* background-color: lightsalmon; */
 }
 
 .covidicon {
@@ -134,8 +151,15 @@ nav ul ul li a {
   font-family: "Open Sans", sans-serif;
 }
 nav ul ul {
-  position: static;
+  position: relative;
+  height: 13vh;
+  top: -100vh;
+  transition: all 0.4s ease-in-out;
   display: none;
+  /* right: 20vw; */
+}
+nav ul ul li{
+  border-bottom: 4px solid darkslategray;
 }
 nav ul li a span {
   /* purane ki posi unke khud k old posi k relative thi or nayi unko parent manti h to vo khud parent ban jayenge */
@@ -147,11 +171,10 @@ nav ul li a span {
 nav ul li a:hover span {
   color: darkcyan;
   transform: rotate(360deg);
+
 }
-.menu:hover {
-  border-radius: 100px;
-  border: transparent;
-  background-color: rgba(175, 170, 170, 0.164);
+#menu1:hover {
+  transform: scale(1.1) ;
 }
 .parent {
   border-bottom: 3px solid black;
@@ -177,7 +200,16 @@ nav ul li a:hover span {
   text-decoration: none;
   color: #1e1e1e;
   background-color: lightsalmon;
-  border: 2px solid black;
+  border-radius: 1vmin;
+  /* border: 2px solid; */
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+.vaccine:hover, .vaccine:focus , .vaccine:active {
+  box-shadow:  0 0 20px rgba(0, 0, 0, 0.5);
+  transform: scale(1.1);
+
 }
 .information {
   height: 18vh;
@@ -193,7 +225,18 @@ nav ul li a:hover span {
   text-decoration: none;
   color: #1e1e1e;
   background-color: skyblue;
-  border: 2px solid black;
+  /* border: 2px solid black; */
+  border-radius: 1vmin;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.information:hover{
+  box-shadow:  0 0 20px rgba(0, 0, 0, 0.5);
+  transform: scale(1.1);
+  /* border-bottom: darkcyan; */
+  /* text-decoration: darkcyan; */
 }
 .doctorinfo{
   height: 18vh;
@@ -209,9 +252,19 @@ nav ul li a:hover span {
   text-decoration: none;
   color: #1e1e1e;
   background-color: goldenrod;
-  border: 2px solid black;
+  /* border: 2px solid black; */
+  border-radius: 1vmin;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 }
 
+.doctorinfo:hover{
+  box-shadow:  0 0 20px rgba(0, 0, 0, 0.5);
+  transform: scale(1.1);
+  /* border-bottom: darkcyan; */
+  /* text-decoration: darkcyan; */
+}
 .news{
   height: 18vh;
   width: 10vw;
@@ -226,9 +279,19 @@ nav ul li a:hover span {
   text-decoration: none;
   color: #1e1e1e;
   background-color: cadetblue;
-  border: 2px solid black;
+  /* border: 2px solid black; */
+  border-radius: 1vmin;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 }
 
+.news:hover{
+  box-shadow:  0 0 20px rgba(0, 0, 0, 0.5);
+  transform: scale(1.1);
+  /* border-bottom: darkcyan; */
+  /* text-decoration: darkcyan; */
+}
 .plasma{
   height: 18vh;
   width: 10vw;
@@ -243,7 +306,18 @@ nav ul li a:hover span {
   text-decoration: none;
   color: #1e1e1e;
   background-color: skyblue;
-  border: 2px solid black;
+  /* border: 2px solid black; */
+  border-radius: 1vmin;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.plasma:hover{
+  box-shadow:  0 0 20px rgba(0, 0, 0, 0.5);
+  transform: scale(1.1);
+  /* border-bottom: darkcyan; */
+  /* text-decoration: darkcyan; */
 }
 .information2parent{
   margin-top: 20px;
@@ -254,29 +328,38 @@ nav ul li a:hover span {
 #information2{
   font-weight: 700;
   font-family: "Open Sans", sans-serif;
-  border: 2px solid black;
+  /* border: 2px solid black; */
   border-radius: 15px;
-  height: 9vh;
-  width: 70vw;
+  height: 7vh;
+  width: 40vw;
+  height: 7vh;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-direction: row;
-  font-size: 3vmin;
+  font-size: 2vmin;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: rgb(195, 231, 245);
+  /* border: 1.5px solid rgb(0, 183, 255); */
   /* background-color: rgb(250, 250, 250); */
 }
 #information3{
   font-weight: 700;
   /* font-family: "Open Sans", sans-serif; */
-  border: 2px solid black;
+  /* border: 2px solid black; */
   border-radius: 15px;
-  height: 9vh;
-  width: 70vw;
+  height: 7vh;
+  width: 40vw;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   flex-direction: row;
-  font-size: 3vmin;
+  font-size: 2vmin;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+  font-family: "Open Sans", sans-serif;
+  background-color: rgb(195, 231, 245);
+  /* border: 1.5px solid rgb(0, 183, 255); */
+  /* background-color: ; */
   /* background-color: rgb(219, 214, 214); */
 }
 .information3parent{
@@ -284,6 +367,7 @@ nav ul li a:hover span {
   margin-top: 20px;
   display: flex;
   justify-content: center;
+  align-items: center;
   /* flex-direction: row; */
 }
 .covidcases{  
@@ -306,12 +390,12 @@ nav ul li a:hover span {
 footer{
   color: white;
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
   margin-top: 3vh;
-  height: 20vh;
+  height: 30vh;
   width: 100%;
-  border: 2px solid black;
+  /* border: 2px solid black; */
   background-color: #1e1e1e;
   font-family: "Open Sans", sans-serif;
 }
@@ -323,9 +407,14 @@ footer{
   background-color: black;
 }
 .textfooter1{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 90%;
   color: white;
   font-size: 3vmin;
+  text-align: center;
 }
 .column1{
   display: flex;
@@ -336,8 +425,9 @@ footer{
   /* border: 2px solid black; */
 }
 .totalcases{
+  padding: 10px;
   font-size: 5vmin;
-  font-weight: 600;
+  font-weight: 700;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -345,13 +435,17 @@ footer{
   height: 45%;
   width: 80%;
   border: 2px solid black;
-  border-radius: 20px;
+  border-radius: 10px;
   background-image: url("Lovepik_com-401677715-wearing-masks-for-supermarket-shopping.png") ;
   background-size: contain ;
   background-repeat: no-repeat;
   background-position-x: right;
+  /* background-color: rgb(146, 201, 255); */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: "Open Sans", sans-serif;
 }
 .totaldeceased{
+  padding: 10px;
   margin-top: 5vmin;
   font-size: 5vmin;
   font-weight: 600;
@@ -363,15 +457,18 @@ footer{
   width: 80%;
   border: 2px black;
   border-style: inset;
-  border-radius: 20px;
+  border-radius: 10px;
   background-image: url("Lovepik_com-450015073-red\ Coronavirus\ Vector.png");
   background-size: contain;
   background-repeat: no-repeat;
-  background-position-x: right;
-  background-position-y: bottom;
+  background-position-x: 17vw;
+  background-position-y: 4vh;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: "Open Sans", sans-serif;
 }
 
 .totalrecovered{
+  padding: 10px;
   font-size: 5vmin;
   /* font-weight: 00; */
   display: flex;
@@ -381,12 +478,15 @@ footer{
   height: 100%;
   width:35vw;
   border: 2px solid black;
-  border-radius: 20px;
+  border-radius: 10px;
   /* background-color: darkkhaki; */
   background-image: url("Lovepik_com-401675861-protecting-patients-against-viruses.png");
   background-repeat: no-repeat;
   background-size: contain;
-  background-position-y: bottom;
+  background-position-x: 5vw;
+  background-position-y: 8.8vh;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: "Open Sans", sans-serif;
 }
 .textofcovid1{
   font-family: "Open Sans", sans-serif;
@@ -431,29 +531,90 @@ footer{
   flex-direction: row;
   width: 100%;
 }
-.footerimg1{
-  align-self: flex-end;
+.footer-content{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 80%;
+  /* border:2px solid snow; */
 }
-#footerimg2{
+.rights{
+  height: 20%;
+  width: 95%;
+  /* border:2px solid snow; */
+  display: flex;
+  flex-direction: row;
+  border-top: 2px solid snow;
+  /* border-radius: 20%;   */
+}
+.headfooter{
+  /* margin: 4vmin; */
+  display: flex;
+  flex-direction: row;
+  font-size: 4vmin;
+  width: 30vw;
+  height: 8vh;
+  word-spacing: 1;
+  /* font-family: "Open Sans", sans-serif; */
+  font-weight: 500;
+}
+.dabba1{
+  display: flex;
+  flex-direction: column;
+  margin-top: 2vmin;
+  margin-left: 2vmin;
+  /* border-right: 2px solid snow; */
+}
+.content-dabba1{
+  height: 7vh;
+  width: 25vw;
+  font-size: 2vmin;
+  font-weight: 500;
+}
+.dabba2{
+  /* align-self: right; */
   display: flex;
   flex-direction: column;
   /* justify-content: center; */
   align-items: center;
-  align-self: flex-end;
-  /* border: 2px solid black; */
-  height: 80%;
+  height: 100%;
   width: 20vw;
+  font-size: 3vmin;
+  margin-left: 1vmin;
 }
-.footertext2{
-  font-family: "Open Sans", sans-serif;
-  color: white;
+.dabbabda{
+  margin-top: 2vmin;
+  display: flex;
+  flex-direction: column;
+  font-size: 3vmin;
+  width: 30vw;
+}
+.contentdabbabda{
+  font-size: 2.7vmin;
+}
+.subdabba2{
   display: flex;
   flex-direction: row;
-  font-size: 3vmin;
-  font-weight: 700;
-  text-align: center;
+  margin-top: 1vh;
 }
-.rights{
+.footerbtns{
+  margin-left: 6.5vw;
+  font-size: 3vmin;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   align-self: flex-end;
-  text-align: start;
+}
+.handles{
+  display: flex;
+}
+#footerimgdb2{
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+#footerimgdb2:hover{
+  transform: scale(1.1);
+}
+.unknown{
+  width: 50%;
 }
