@@ -1,0 +1,274 @@
+* {
+  /* this applys to every aspect in html file  */
+  margin: 0px;
+  padding: 0px;
+  user-select: none;
+  /* color: white; */
+  /* this says padding and border are included */
+  box-sizing: border-box;
+}
+.header {
+  flex: 9.5;
+  display: flex;
+  justify-content: center;
+  color: black;
+  font-size: 55px;
+  font-weight: 400;
+  font-family: "Open Sans", sans-serif;
+  border-radius: 10px;
+}
+body{
+  width: 100%;
+  height: 100%;
+}
+.menu {
+  /* position: relative; */
+  flex: 0.5;
+  bottom: 60px;
+  background-color: transparent;
+  border: none;
+  height: 60px;
+  width: 20px;
+  /* user-select: none; */
+  transition: all 0.3s ease-in-out;
+}
+.bodysubclass {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  width: 100%;
+  background-color: white;
+}
+.menu:hover {
+  transform: scale(1.1);
+  /* border: transparent; */
+  /* background-color: rgba(175, 170, 170, 0.164); */
+}
+.navibar {
+  background-color: #1e1e1e;
+  height: 100%;
+  border-radius: 20px;
+}
+.sidebar {
+  left: 0%;
+  /* right:20%; */
+  /* display: none; */
+  background-color: #1e1e1e;
+  top: 0%;
+  /* border-radius: 40px; */
+  position: fixed;
+  bottom: 120px;
+  color: white;
+  margin-top: 0px;
+  margin-left: 0px;
+  width: 20vw;
+  height: 100%;
+  z-index: 5;
+  transition: all 0.3s ease-in-out;
+}
+.sidebar,
+.text {
+  color: white;
+  font-size: 4vmin;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300px;
+  /* stays hat must be distance between lines */
+  line-height: 50px;
+  text-align: left;
+}
+.text {
+  border-radius: 40px;
+  background-color: #1e1e1e;
+  text-align: center;
+  font-weight: 500;
+  color: white;
+  font-size: 4vmin;
+  font-family: "Open Sans", sans-serif;
+}
+nav ul {
+  /* background-color: #1e1e1e; */
+  height: 100%;
+  width: 100%;
+  /* mtlb ye square shaped m rhegi */
+  list-style: square;
+}
+nav ul li {
+  /* ye nav k ul li p apply hoga  */
+  color: white;
+  line-height: 60px;
+  border-bottom: 5px solid darkslategray;
+  /* border-left:2px solid transparent; */
+  /* width: 100%; */
+}
+nav ul li a {
+  /* ye nav k ul li k a p apply hoga  */
+  /* inki posi bhe apne purane elements k relative hongi  */
+  color: white;
+  position: relative;
+  flex-direction: left;
+  font-size: 20px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  display: block;
+  /* removing base lines */
+  text-decoration: none;
+  /* width: 100%; */
+  margin-left: 0px;
+  padding-left: 5px;
+  border-left: 4px solid transparent;
+  transition: all 0.3s ease-in-out;
+}
+nav ul li a:hover {
+  color: darkcyan;
+  /* font-size: 25px; */
+  background-color: #1e1e1e;
+  border-left-color: cyan;
+}
+.covidicon {
+  margin-right: 5px;
+}
+nav ul ul li {
+  line-height: 40px;
+  border-bottom: none;
+}
+nav ul ul li a {
+  /* for inside elements */
+  color: white;
+  padding-left: 17%;
+  font-size: 20px;
+  font-family: "Open Sans", sans-serif;
+}
+nav ul ul {
+  position: static;
+  display: none;
+  transition: all 0.3s ease-in-out;
+}
+nav ul li a span {
+  /* purane ki posi unke khud k old posi k relative thi or nayi unko parent manti h to vo khud parent ban jayenge */
+  /* parent can be accordi */
+  position: absolute;
+  right: 30px;
+  transition: all 0.3s ease-in-out;
+}
+nav ul li a:hover span {
+  color: darkcyan;
+  transform: rotate(360deg);
+}
+.infobtn{
+  position: fixed;
+  top: 10vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  width: 100%;
+  background-color: white;
+  /* border: 2px solid black; */
+}
+body div ul{
+  display: none;
+  list-style: square;
+}
+body div ul a li{
+  display: block;
+  color: white;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  font-size: 3.5vmin;
+  border-bottom: 0.9vh solid darkcyan;
+  background-color: #1e1e1e;
+  /* position: relative; */
+  font-family: "Open Sans", sans-serif;
+}
+.title{
+  font-family: "Open Sans", sans-serif;
+}
+body div ul a li:hover{
+  border-left: 0.3vw solid cyan;
+  color: darkcyan;
+}
+#closingsidebar a{
+  color: white;
+  text-decoration: none;
+}
+.displayinfo1{
+  position: fixed;
+  display: flex;
+  align-items: flex-start;
+  /* justify-content: center; */
+  flex-direction: column;
+  /* border: 2px solid black; */
+  margin-top: 6%;
+  width: 100%;
+  height: 15vh;
+}
+.infobtns{
+  margin-left: 0;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  /* align-items: flex-start; */
+  height: 17vh;
+  width: 100%;
+  /* border: 2px solid black; */
+  background-color: white;
+}
+.infobtns1{
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-bottom: 1%;
+  height: 10%;
+  width: 40%;
+  /* border: 2px solid black; */
+}
+.tweets{
+  color: black;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 3vmin;
+  display: flex;
+  justify-content: center;
+  /* margin-right: 1%; */
+  text-decoration: none;
+  height: 6vh;
+  width: 12vw;
+  /* border: 2px solid black; */
+  transition: all 0.2s ease-in-out;
+}
+.personaldata{
+  color: black; 
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 3vmin;
+  display: flex;
+  justify-content: center;
+  /* margin-left: 1%; */
+  text-decoration: none;
+  height: 6vh;
+  width: 12vw;
+  /* border: 2px solid black; */
+  transition: all 0.2s ease-in-out;
+}
+.tweets:hover{
+  border-bottom: 5px solid darkcyan;
+  border-style: bolder;
+  color: cyan;
+}
+.personaldata:hover{
+  border-bottom: 5px solid darkcyan;
+  border-style: bolder;
+  color: cyan;
+}
+.displayinformation{
+  margin: auto;
+  /* border: 2px solid black; */
+  width: 60vw;
+  height: 90vh;
+  /* background-color: blue; */
+}
+
+
