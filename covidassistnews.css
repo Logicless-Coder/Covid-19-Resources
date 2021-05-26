@@ -10,9 +10,9 @@
   font-family: "Open Sans", sans-serif;
 }
 body {
-   display: flex; 
-   flex-direction: column;
-  align-items: center; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
   height: 100%;
 }
@@ -52,7 +52,7 @@ body {
   transition-property: left;
   /* transform: translateY(20vw); */
   overflow-y: scroll;
-  z-index: 1;
+  /* z-index: 1; */
 }
 .title {
   font-family: "Open Sans", sans-serif;
@@ -356,6 +356,31 @@ nav ul li a:hover span {
   height: 100vh;
   pointer-events: none;
   z-index: 0;
+}
+.loading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  background-color: rgba(25, 31, 38, 255);
+  color: white;
+}
+.disappear {
+  animation: vanish 1s forwards;
+}
+@keyframes vanish {
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 @media (min-height: 340px) and (max-width: 640px) {
   * {
